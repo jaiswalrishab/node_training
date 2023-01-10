@@ -1,0 +1,100 @@
+###
+POST http://localhost:3000/auth/login
+content-type: application/json
+
+{
+  "username" : "admin",
+  "password" : "password123"
+}
+###
+GET http://localhost:3000/auth/
+
+###
+POST http://localhost:3000/airline
+Content-Type: application/json
+
+{
+  "name" : "AirFlow"
+}
+
+###
+POST  http://localhost:3000/flightbooking
+Content-Type:application/json
+
+{
+  "flight_number" : "6E235",
+  "airline_id" : 1,
+  "from_place" : "delhi",
+  "to_place" : "mumbai",
+  "start_time" : "9:25", 
+  "end_time" : "13:35",
+  "total_number_of_business_class_seats" : "30",
+  "total_number_of_nonbusiness_class_seats" : "70", 
+  "ticket_cost" : "5300",
+  "total_number_of_seats" : "100",
+  "meal" : "veg" 
+}
+
+###
+
+PUT  http://localhost:3000/airline
+Content-Type:application/json
+
+{
+  "name" : "IndigoAirlines",
+  "blocked" : "yes",
+  "id" : 1
+}
+
+###
+
+GET  http://localhost:3000/flightbooking
+Content-Type:application/json
+
+{ 
+"date": "03/02/2023",
+"from_place": "delhi",
+"to_place": "mumbai",
+"round_trip": "yes" 
+}
+
+###
+POST http://localhost:3000/flightbooking/booking
+content-type:application/json
+
+{
+  "flight_id": 2,
+  "booked_by": "ram",
+  "emailId": "ram@gmail.com",
+  "number_of_seats": 2,
+  "passengers": 
+  [
+    {
+      "name": "46pnr1",
+      "age": 24,
+      "gender": "male"
+    },
+    {
+      "name": "46pnr2",
+      "age": 23,
+      "gender": "female"}
+  ],
+  "selected_meal": "veg", 
+  "selected_seat_number": null
+}
+
+###
+  GET http://localhost:3000/flightbooking/history/mukesh@gmail.com
+Content-Type:application/json
+
+###
+  GET http://localhost:3000/flightbooking/ticket/1
+Content-Type:application/json
+
+
+###
+  PUT http://localhost:3000/flightbooking/cancel/16
+Content-Type:application/json
+
+
+###
